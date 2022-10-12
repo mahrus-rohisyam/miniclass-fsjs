@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+#title {
+  color: blue;
+}
+
+.deskripsi {
+  color: grey;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: red;
+  }
+}
