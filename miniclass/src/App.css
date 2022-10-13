@@ -12,6 +12,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  padding: 0;
 }
 
 ul, li, a {
@@ -21,12 +22,13 @@ ul, li, a {
 nav {
   background-color: #2A9D8F;
   display: flex;
-  position: relative;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
   padding: 20px 10px;
   width: 100%;
   height: auto;
+  z-index: 99;
 }
 
 nav > div {
@@ -63,6 +65,137 @@ footer {
   height: 150px;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+}
+
+#welcome {
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome > img {
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+#welcome > h2 {
+  margin-top: 10px;
+}
+
+#welcome > p {
+  margin: 0;
+}
+
+#about {
+  background-color: #264653;
+  align-items: center;
+  padding-top: 100px;
+  color: white;
+  text-align: center;
+}
+
+#stack {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#stack > li {
+  list-style: none;
+}
+
+#stack > li > img {
+  max-width: 200px;
+}
+
+#project {
+  padding-top: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+#project-grid {
+  display: flex;
+  width: 85%;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#project-grid > li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+#project-grid > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#project-grid > li > a:hover {
+  transition: all 0.75s;
+  transform: scale(110%);
+  z-index: 99;
+}
+
+#project-grid > li > a > img {
+  width: 350px;
+  /* max-width: 300px; */
+}
+
+#project-grid > li > a > span {
+  font-size: 20px;
+}
+
+#contact {
+  align-items: center;
+  background-color: #264653;
+  color: white;
+  padding-top: 50px;
+}
+
+#contact p, span {
+  margin: 0;
+}
+
+#contact > p {
+  margin-top: 20px;
+}
+
+#contact > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#contact > ul > li {
+  list-style: none;
+}
+
+#contact > ul > li:hover {
+  transform: scale(110%);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 @media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -75,5 +208,13 @@ footer {
 
   nav > ul {
     align-items: center;
+  }
+
+  #project-grid {
+    width: 100%;
+  }
+
+  #project-grid > li > a > img {
+    width: 80%;
   }
 }
