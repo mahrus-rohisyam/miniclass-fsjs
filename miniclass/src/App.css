@@ -4,4 +4,76 @@ html {
 
 body {
   background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul, li, a {
+  margin: 0;
+}
+
+nav {
+  background-color: #2A9D8F;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  width: 100%;
+  height: auto;
+}
+
+nav > div {
+  width: 100%;
+}
+
+nav > ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+nav > ul > li {
+  list-style: none;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #264653;
+}
+
+nav > ul > li > a:hover {
+  color: black;
+}
+
+footer {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color: #2A9D8F;
+  height: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav > div {
+    text-align: center;
+    padding: 5px 0;
+  }
+
+  nav > ul {
+    align-items: center;
+  }
 }
